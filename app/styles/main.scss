@@ -360,6 +360,10 @@ main {
         cursor: pointer;
         background: #fff;
       }
+      
+      &.locked {
+        background: #fff; 
+      }
 
       .name {
         white-space: normal;
@@ -381,7 +385,7 @@ main {
   }
 
   .matrix {
-    background: url(../images/grid_line.png);
+    background: url(../images/grid_line.png) 1px 0;
     margin-left: 20px;
     border-left: 1px solid #b2b2b2;
   }
@@ -396,6 +400,7 @@ main {
     }
 
     .box {
+      box-sizing: content-box;
       padding: 10px;
       float: left;
       background: #fff;
@@ -403,6 +408,11 @@ main {
       margin: 20px 10px 0px 10px;
       position: relative;
       font-size: 0.9em;
+      
+      &.locked {
+       border: 10px solid #e3e2a6;
+       margin: 0;
+      }
 
       &.env {
         background: #a0a0a0;
@@ -426,7 +436,7 @@ main {
 
       &.empty {
         background: transparent;
-        width: 180px;
+        width: 160px;
       }
 
       & > span {
